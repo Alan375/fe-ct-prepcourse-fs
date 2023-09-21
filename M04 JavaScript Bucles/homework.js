@@ -108,9 +108,7 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   if (Number.isInteger(num))  {
-      return true;
-   } else if (num < 0 || num > 0) {
+   if (Number.isInteger(num)) {
       return true;
    } else return false;
 }
@@ -188,9 +186,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let num = num +5
-   
+   let contador = 0;
+   do {
+      num += 5;
+      contador ++;
+   } while (contador < 8); 
+   return num;
 }
+   
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
