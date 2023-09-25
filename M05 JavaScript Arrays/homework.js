@@ -63,24 +63,40 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   if (array.includes(elemento)) {
+      return true;
+   } else return false ;
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   let resultado = 0;
+   for (let i = 0; i < arrayOfNums.length; i++) {
+      resultado += arrayOfNums[i];
+   } return resultado;
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   let resultados= 0;
+   for (let i = 0; i < resultadosTest.length; i++) {
+      resultados += resultadosTest[i];
+   } return resultados / resultadosTest.length;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   let masgrande = arrayOfNums[0];
+   for (let i = 1; i < arrayOfNums.length; i++) {
+   if(arrayOfNums[i] > masgrande)
+      masgrande = arrayOfNums[i];
+   } return masgrande;
 }
 
 function multiplicarArgumentos() {
@@ -88,11 +104,27 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   if (arguments.length === 0) { 
+      return 0 ;
+   } else if(arguments.length === 1) { 
+      return arguments[0];
+   } else {
+   let producto = 1;
+   for (let i = 0; i < arguments.length; i++) { 
+   producto *= arguments[i] ; 
+   } return producto ;
+   }
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   let contador = 0
+   for (let i = 0; i < array.length; i++) {
+      if ( array[i] > 18) {
+         contador ++;
+      }
+   } return contador;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -100,18 +132,55 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   switch(numeroDeDia) {
+      case 1:
+         return "Es fin de semana";
+         break;
+      case 2:
+         return "Es dia laboral";
+         break;
+      case 3:
+         return "Es dia laboral";
+         break;
+      case 4: 
+         return "Es dia laboral";
+         break;
+      case 5:
+         return "Es dia laboral";
+         break;
+      case 6:
+         return "Es dia laboral";
+         break;
+      case 7:
+         return "Es fin de semana";
+         break;
+      default:
+         return "Dia no valido";
+         break;
+}
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   const numeroComoCadena= num.toString();
+   if (numeroComoCadena.charAt(0) === "9" ) { 
+      return true;
+}    else return false;
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   if (array.length === 0) {
+       return true;
+   }
+   const sonIguales = array[0] 
+   return array.every(function(elemento) { 
+      return elemento === sonIguales;
+   })
 }
 
 function mesesDelAño(array) {
