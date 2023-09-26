@@ -188,18 +188,44 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   const mesesEncontrados =[];
+   for (let i = 0; i < array.length; i++) {
+      const mes = array[i];
+      if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre") {
+         mesesEncontrados.push(mes);
+      }
+   } if (mesesEncontrados.length === 3) {
+      return mesesEncontrados;
+   } else return "No se encontraron los meses pedidos" ;
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-}
+   var tablaDel6 = [];
+
+   for (var i = 0; i <= 10; i++) {
+     var resultado = 6 * i;
+     tablaDel6.push(resultado);
+   }
+ 
+   return tablaDel6;
+ }
+
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   const mayoresDeCien=[];
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+         mayoresDeCien.push(array[i])
+      }
+   }
+   return mayoresDeCien;
+
 }
 
 /* ----------------------------------------------------------------------------------
@@ -213,6 +239,16 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   const resultado=[];
+   for(let i = 0; i < 10; i++) {
+      num += 2
+      resultado.push(num);
+      if (num === 10) {
+         break;
+      }
+   } if (num ===10) return "Se interrumpió la ejecución";
+   else return resultado;
+
 }
 
 function continueStatement(num) {
@@ -222,6 +258,14 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+const resultado = [0];
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  num += 2;
+  resultado.push(num);
+} return resultado;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
